@@ -1,0 +1,37 @@
+.forecast__container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.forecast__title {
+  margin-bottom: 24px;
+}
+
+.forecast__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forecast__listItem {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  transition: transform 200ms;
+}
+
+.forecast__listItem:hover {
+  transform: scale(1.2);
+}
+
+.forecast__listItem__temp {
+}
+
+.forecast__listItem__icon {
+  margin: 0 0 16px;
+}
+
+.forecast__listItem__day {
+}
