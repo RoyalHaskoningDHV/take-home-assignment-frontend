@@ -1,54 +1,33 @@
-# Frontend assignment
+# OpenWeather API react app
 
-_For [Royal HaskoningDHV][]._
-
-* [Overview][]
-* [Acceptance criteria][]
-* [Technical criteria][]
+- [Overview][]
+- [How To Run][]
+- [ToDo][]
 
 ## Overview
-[Overview]: #overview
 
-Build an application that gets the current location, and then uses said location
-to fetch and display the current weather from the [OpenWeatherMap API][].
+[overview]: #overview
 
-## Acceptance criteria
-[Acceptance criteria]: #acceptance-criteria
+This is a simple FE react app created with CRA that calls two endpoints of [OpenWeatherMap API][] to get the current weather in a certain location and a weather forecast of the next 5 days for the same location.
 
-* At least the following needs to be displayed as a result:
-  * The location name.
-  * The current temperature.
-  * A short description of the current weather (_Clear_, _Foggy_, etc).
-* It should be possible to re-fetch/refresh the result.
-* The application should be responsive.
-* _Optional_: Three day weather forecast for current location.
-* _Optional_: Daily notifications of weather in current location.
+There are mainly 2 different ways to get weather data; either by reading _Geolocation_ from users browser's navigator API, or by asking the user to type in a valid city name.
 
-## Technical criteria
-[Technical criteria]: #technical-criteria
+## How To Run
 
-* Framework of your choice (we use [React][]).
-* Errors need to be handled properly.
-* The application should be available through [Git][].
-  * If to be kept private, the repository can be shared with [rhdhvolschenk][] and [twiggler][].
-* Documentation on how to set up and run the application locally.
-* _Optional_: Testing:
-  * Unit.
-  * End-to-end.
-  * Linting ([Eslint][] or similar).
-  * Formatting ([Prettier][] or similar).
-* _Optional_: Typing ([TypeScript][], [Flow][] or similar, we use [TypeScript]).
-* _Optional_: Containerization.
+[how to run]: #how-to-run
 
----
+There are 2 ways to run this app:
 
-[Eslint]: https://eslint.org/
-[Flow]: https://flow.org/
-[Git]: https://git-scm.com/
-[OpenWeatherMap API]: https://openweathermap.org/api
-[Prettier]: https://prettier.io/
-[React]: https://reactjs.org/
-[rhdhvolschenk]: https://github.com/rhdhvolschenk
-[Royal HaskoningDHV]: https://www.royalhaskoningdhv.com/
-[twiggler]: https://github.com/twiggler
-[TypeScript]: https://www.typescriptlang.org/
+1. I have already deployed the latest build to github-pages under [lenaggar.github.io/react-weather-app](https://lenaggar.github.io/react-weather-app/). Please let me know if it's not working.
+
+2. The second way is to clone the repo locally, install the dependencies, and start the app.
+   And since it's a CRA app, all you need to do after cloning the repo is to run `yarn install` (that will install all the dependencies), and then once it finishes, run `yarn start`. That's it!
+
+## ToDo
+
+[todo]: #todo
+
+- Add unit tests.
+- Enhance micro-interactions (animations).
+- Restrict user to select a city from a dropdown list containing all the possible cities.
+- Currently all errors are alerted to the userin an alert box. So, handling errors in a better way UI-wise.
