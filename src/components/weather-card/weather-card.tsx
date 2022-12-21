@@ -1,41 +1,27 @@
+import type { transformWeatherDataForUiReturn } from "../../utils";
 import styles from "./weather-card.module.css";
 
 interface WeatherCardPrope {
-  title: string;
-  temperature: number;
-  feelsLike: number;
-  maxTemperature: number;
-  minTemperature: number;
-  icon: string;
+  weather: transformWeatherDataForUiReturn;
 }
-export function WeatherCard({
-  title,
-  temperature,
-  feelsLike,
-  minTemperature,
-  maxTemperature,
-  icon,
-}: WeatherCardPrope): JSX.Element {
+export function WeatherCard({ weather }: WeatherCardPrope): JSX.Element {
   return (
     <div className={styles.weatherCard}>
-      <h4 className={styles.weatherCard__title}>{title}</h4>
+      <h4 className={styles.weatherCard__title}>{weather.title}</h4>
       <p className={styles.weatherCard__temp}>
-        Current temerature: <strong>{Math.round(temperature)}°C</strong>
+        Current temp: <strong>{weather.temp}°C</strong>
       </p>
       <p className={styles.weatherCard__feelsLike}>
-        Feels like: <strong>{Math.round(feelsLike)}°C</strong>
+        Feels like: <strong>{weather.feelsLike}°C</strong>
       </p>
       <p className={styles.weatherCard__minMax}>
-        Max: <strong>{Math.round(maxTemperature)}°C</strong>
+        Max: <strong>{weather.maxTemp}°C</strong>
         ,
         <span className={styles.weatherCard__minMaxSeparator} />
-        Min: <strong>{Math.round(minTemperature)}°C</strong>
+        Min: <strong>{weather.minTemp}°C</strong>
       </p>
 
-      <img
-        className={styles.weatherCard__weatherIcon}
-        src={`http://openweathermap.org/img/wn/${icon}@4x.png`}
-      />
+      <img className={styles.weatherCard__weatherIcon} src={weather.icon} />
     </div>
   );
 }
