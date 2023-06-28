@@ -30,7 +30,7 @@ to fetch and display the current weather from the [OpenWeatherMap API][].
 * Framework of your choice (we use [React][]).
 * Errors need to be handled properly.
 * The application should be available through [Git][].
-  * If to be kept private, the repository can be shared with [rhdhvolschenk][] and [twiggler][].
+  * If to be kept private, the repository can be shared with [rhdhvolschenk][] and [rramdas][].
 * Documentation on how to set up and run the application locally.
 * _Optional_: Testing:
   * Unit.
